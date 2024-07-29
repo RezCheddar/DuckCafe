@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cug4r6resvn0r"]
+
+[ext_resource type="Script" path="res://resources/Kitchenware/kitchen_ware.gd" id="1_pxh1s"]
+[ext_resource type="Texture2D" uid="uid://c6wj2nrbklocp" path="res://resources/Kitchenware/Sprites/Paperplate.svg" id="2_uyoqi"]
+[ext_resource type="Shape2D" uid="uid://bcthiocnvg0jf" path="res://resources/Kitchenware/Sprites/MediumPlate_Collision.tres" id="3_8h75t"]
+
+[node name="KitchenWare" type="StaticBody2D"]
+z_index = 4
+disable_mode = 2
+script = ExtResource("1_pxh1s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+position = Vector2(1, -10)
+scale = Vector2(2.05295, 2.30263)
+texture = ExtResource("2_uyoqi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -9)
+shape = ExtResource("3_8h75t")
+
+[node name="c" type="CollisionShape2D" parent="."]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

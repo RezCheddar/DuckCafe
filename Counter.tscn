@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnslcwrw7s7t6"]
+
+[ext_resource type="Texture2D" uid="uid://bp2oooenobqs1" path="res://Neko Cafe Asset Pack/neko-cafe-furnitures.png" id="1_efoxj"]
+[ext_resource type="Script" path="res://Interactable.gd" id="2_hn32t"]
+[ext_resource type="PackedScene" uid="uid://dq6qnjbncqc2" path="res://server_counter.tscn" id="3_n8f3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u53sq"]
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtpey"]
+size = Vector2(71, 46)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(79, 61)
+texture = ExtResource("1_efoxj")
+region_enabled = true
+region_rect = Rect2(16.9284, 24.7291, 62.3211, 23.1996)
+script = ExtResource("2_hn32t")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+self_modulate = Color(0, 1, 1, 1)
+texture_filter = 1
+offset_left = -10.0
+offset_top = -45.0
+offset_right = 12.0
+offset_bottom = -23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u53sq")
+
+[node name="Label" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 18.0
+offset_bottom = 22.0
+text = "E"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_xtpey")
+
+[node name="ServerCounter" parent="." instance=ExtResource("3_n8f3y")]
+visible = false
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

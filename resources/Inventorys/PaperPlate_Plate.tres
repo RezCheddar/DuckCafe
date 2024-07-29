@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Cookware" load_steps=4 format=3 uid="uid://cy7n2xgm44y36"]
+
+[ext_resource type="Script" path="res://resources/Inventorys/Cookware.gd" id="1_bbjgb"]
+[ext_resource type="Texture2D" uid="uid://c6wj2nrbklocp" path="res://resources/Kitchenware/Sprites/Paperplate.svg" id="1_o42tg"]
+[ext_resource type="Shape2D" uid="uid://bcthiocnvg0jf" path="res://resources/Kitchenware/Sprites/MediumPlate_Collision.tres" id="2_1503g"]
+
+[resource]
+script = ExtResource("1_bbjgb")
+Name = "Paper plate"
+Tex = ExtResource("1_o42tg")
+Size_x = 9
+Size_y = 9
+Type = "Plate"
+Stackable = true
+collisionShape = ExtResource("2_1503g")
+collisionPattern = -1

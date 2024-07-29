@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Base_Ingredient" load_steps=3 format=3 uid="uid://dguwfmw4mcxh1"]
+
+[ext_resource type="Texture2D" uid="uid://v15welxfkqk6" path="res://resources/Inventorys/Items/TeaDrink.svg" id="1_onsab"]
+[ext_resource type="Script" path="res://resources/Inventorys/BaseIngredient.gd" id="2_ui7ko"]
+
+[resource]
+script = ExtResource("2_ui7ko")
+name = "StrawberryJuice"
+image = ExtResource("1_onsab")
+Pri_Color = Color(0.921569, 0.0705882, 0.113725, 1)
+Sec_Color = Color(1, 0.286275, 0.341176, 1)

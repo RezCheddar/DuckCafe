@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb5l7ja5dbwwk"]
+
+[ext_resource type="PackedScene" uid="uid://35xh7v0sipe4" path="res://water_cup.tscn" id="1_7jbck"]
+[ext_resource type="Script" path="res://main.gd" id="1_wkwnq"]
+[ext_resource type="PackedScene" uid="uid://d3j4r62wpldnb" path="res://cup_ware.tscn" id="3_4jtha"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_wkwnq")
+
+[node name="Water_Cup" parent="." instance=ExtResource("1_7jbck")]
+position = Vector2(311, 428)
+
+[node name="CupWare" parent="." instance=ExtResource("3_4jtha")]
+position = Vector2(71, 395)

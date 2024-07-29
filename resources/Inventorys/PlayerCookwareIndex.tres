@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Cookware_Index" load_steps=4 format=3 uid="uid://bx2jdaxkjfmk4"]
+
+[ext_resource type="Script" path="res://resources/Inventorys/CookwareIndex.gd" id="1_3g7gl"]
+[ext_resource type="Resource" uid="uid://dtpd2lo15uovy" path="res://resources/Inventorys/PaperCup_Cup.tres" id="1_7kkf4"]
+[ext_resource type="Resource" uid="uid://cy7n2xgm44y36" path="res://resources/Inventorys/PaperPlate_Plate.tres" id="2_nd3o6"]
+
+[resource]
+script = ExtResource("1_3g7gl")
+index = [[ExtResource("2_nd3o6"), 2], [ExtResource("1_7kkf4"), 5]]

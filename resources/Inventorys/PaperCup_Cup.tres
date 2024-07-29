@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Cookware" load_steps=4 format=3 uid="uid://dtpd2lo15uovy"]
+
+[ext_resource type="Texture2D" uid="uid://s0s8851fv4dt" path="res://resources/Kitchenware/Sprites/Papercup.svg" id="1_ck5mi"]
+[ext_resource type="Script" path="res://resources/Inventorys/Cookware.gd" id="1_reknh"]
+[ext_resource type="Shape2D" uid="uid://b6tnk0os01wmi" path="res://resources/Kitchenware/Sprites/MediumCup_Collision.tres" id="2_sbwjg"]
+
+[resource]
+script = ExtResource("1_reknh")
+Name = "Paper cup"
+Tex = ExtResource("1_ck5mi")
+Size_x = 5
+Size_y = 5
+Type = "Cup"
+Stackable = false
+collisionShape = ExtResource("2_sbwjg")
+collisionPattern = 1

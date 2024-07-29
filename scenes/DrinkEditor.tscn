@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmmikwegu4ohp"]
+
+[ext_resource type="PackedScene" uid="uid://cwbrn8d5q2n3c" path="res://scenes/drinks.tscn" id="1_rrox5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvyjt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Drinks" parent="." instance=ExtResource("1_rrox5")]
+position = Vector2(179, -52)
+scale = Vector2(1.68, 1.68)
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(0.227451, 1, 1, 1)
+z_index = -3
+offset_right = 1264.0
+offset_bottom = 912.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rvyjt")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(500, 250)
+offset_left = 690.0
+offset_top = 109.0
+offset_right = 1267.0
+offset_bottom = 360.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 2
